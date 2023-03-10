@@ -8,3 +8,4 @@ uvicorn[standard]
 pyannote.audio
 speechbox
 transformers
+python-dotenv
