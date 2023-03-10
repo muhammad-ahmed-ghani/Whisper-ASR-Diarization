@@ -1,0 +1,10 @@
+torch
+torchaudio
+numpy
+flask
+flask-cors
+asgiref
+uvicorn[standard]
+pyannote.audio
+speechbox
+transformers
