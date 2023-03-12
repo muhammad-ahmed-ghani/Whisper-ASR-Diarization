@@ -9,3 +9,4 @@ pyannote.audio
 speechbox
 transformers
 python-dotenv
+gradio

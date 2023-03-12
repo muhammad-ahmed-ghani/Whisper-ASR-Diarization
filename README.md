@@ -16,9 +16,15 @@ pip install -r requirements.txt
 2. Create a .env file in the root directory and add the following line
 ```HUGGINGFACE_TOKEN=<your_huggingface_token>```
 3. Accept the **conditions** for **Pyannote** [Diarization](https://huggingface.co/pyannote/speaker-diarization) and [Segmentation](https://huggingface.co/pyannote/segmentation) model.
-4. Run the server using ```uvicorn main:asgi_app --reload``` **OR** ```python app.py```
-5. Test the server using the following command
-```bash
-curl -F "file=@<path_to_audio_file>" -F "return_format=<txt/csv/srt>" http://localhost:8000/api/v1/transcribe
-```
-Here **file** is the audio file absolute path and return_format is the format in which you want the transcription. It can be **txt**, **csv** or **srt**.
+
+4. Running Gradio Demo
+    ```bash
+    python demo.py
+    ```
+Running Flask Server
+1. Run the server using ```uvicorn main:asgi_app --reload``` **OR** ```python app.py```.
+2. Test the server using the following command
+    ```bash
+    curl -F "file=@<path_to_audio_file>" -F "return_format=<txt/csv/srt>" http://localhost:8000/api/v1/transcribe
+    ```
+    Here **file** is the audio file absolute path and return_format is the format in which you want the transcription. It can be **txt**, **csv** or **srt**.
